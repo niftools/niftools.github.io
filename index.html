@@ -1,0 +1,73 @@
+---
+layout: default
+navbar: navbar-inverse navbar-inversed
+menu: home
+css: ['index.css']
+---
+<section class="jumbotron">
+    <div class="container">
+        <h1>{{ site.title }}</h1>
+        <h3>{{ site.description }}</h3>
+        <div id="jumbotron-meta-info">
+            {% if site.github_url %}
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-mark-github"></span>
+                <a href="{{ site.github_url }}" target="_blank">{{ site.name }}</a>
+            </span> {% endif %}
+            {% if site.youtube %}
+            <span class="meta-info hvr-grow">
+                <div class="g-ytsubscribe" data-channelid="{{ site.youtube }}" data-layout="default" data-count="default"></div>
+                <script async src="https://apis.google.com/js/platform.js"></script>
+            </span> {% endif %}
+            {% if site.twitter %}
+            <span class="meta-info hvr-grow">
+                <a href="https://twitter.com/{{ site.twitter }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter }}</a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </span> {% endif %}
+        </div>
+    </div>
+</section>
+<section class="content container">
+
+    <div class="row">
+
+        <!-- Post List -->
+        <div class="col-lg-6 col-md-8 col-sm-12">
+
+            <ol class="post-list">
+                {% for post in paginator.posts %}
+                <li class="post-list-item">
+                    <h2 class="post-list-title">
+                        <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+                    <p class="post-list-description">
+                        {{ post.excerpt | strip_html | strip }}
+                    </p>
+                    <p class="post-list-meta">
+                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                    </p>
+                </li>
+                {% endfor %}
+            </ol>
+
+            <!-- Pagination -->
+            {% include pagination.html %}
+
+        </div>
+
+        <div class="col-lg-6 col-md-4 col-sm-12">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-6 col-xs-6">
+                    {% include sidebar-repo.html %}
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-6 col-xs-6 social">
+                    {% include sidebar-social.html %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+

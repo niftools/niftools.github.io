@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% include jumbotron.html %}
+
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="row">
+
+        {% if page.toc == true %}
+        <div class="col-md-2 toc-bar">
+            {% include sidebar-toc.html %}
+        </div>
+        <div class="col-md-10 markdown-body">
+            {{ content }}
+        </div>
+        {% else %}
+        <div class="col-md-12 markdown-body">
+            {{ content }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</article>

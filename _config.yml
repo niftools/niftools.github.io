@@ -1,1 +1,110 @@
-theme: jekyll-theme-cayman
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: NifTools Project
+description: NIF File Format Library and Tools
+name: NifTools
+site: NifTools.org
+url: https://niftools.github.io
+email: info@niftools.org
+twitter: niftools
+youtube: UC3oVHybxr9BsL-Tjpm4R7EQ
+github_url: https://github.com/niftools
+repository: niftools/niftools.github.io  # This must match the repo to build on GitHub
+                                         # i.e. forks will not build.
+
+# Google Analytics
+#analytics :
+  #provider : google
+  #google :
+  #    tracking_id : 'tracking_id'  # ex. UA-72165600-X
+
+## Gem
+gems:
+  - rouge
+  - kramdown
+  #- jekyll-admin  # Uncomment this to use localhost:4000/admin to write posts
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-github-metadata
+
+# Pagination
+paginate: 5
+paginate_path: 'page:num'
+
+# Sidebar
+side_bar_repo_limit: 6
+
+# Navigation
+navs:
+  -
+    href: /
+    label: Home
+
+  -
+    href: /projects
+    label: Our Projects
+
+  -
+    href: /blog
+    label: Blog
+
+  -
+    href: /documentation
+    label: Documentation
+
+  -
+    href: http://niftools.sourceforge.net/forum
+    label: Forums
+
+  -
+    href: /about
+    label: About
+
+# Game Lists
+bethesda_games: 
+  - Morrowind
+  - Oblivion
+  - Fallout 3
+  - "Fallout: New Vegas"
+  - Skyrim
+  - Fallout 4
+  - Skyrim SE
+
+other_games:
+  - Civilization IV
+  - Freedom Force
+  - Freedom Force vs the 3rd Reich
+  - "Star Trek: Bridge Commander"
+  - Dark Age of Camelot
+  - Zoo Tycoon 2
+  - Empire Earth II
+  - Empire Earth III
+  - Sid Meier's Railroads
+  - "Megami Tensei: Imagine"
+  - Pro Cycling Manager
+  - Loki
+  - Prison Tycoon
+  - Wildlife Park 2
+  - Red Ocean
+  - The Guild 2
+  - Axis and Allies
+  - Bully SE
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
+
+quiet:    false
+defaults: []
+
+exclude: ['Gemfile', 'Gemfile.lock', 'README.md', 'LICENSE', 'bower.json']
+
+kramdown:
+  input: GFM

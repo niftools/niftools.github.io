@@ -1,0 +1,6 @@
+<p><strong>NifTools</strong> is an open source project creating tools such as editors, C++/Python libraries, and plugins for 3ds Max, Blender, and Maya for files used by the <strong>NetImmerse/Gamebryo™</strong> engine and Bethesda Game Studio's <strong>Creation Engine</strong>. These tools enable users to create and edit 3D models and animations used in several popular PC games.</p>
+
+<p>Development has most notably benefited  
+{% for game in bethesda_games %}{% if forloop.first == true %}{% elsif forloop.last == true %}, and {% else %}, {% endif %}{{ game }}{% endfor %}.
+
+Other games include {% for game in site.other_games %}{% if forloop.first == true %}{% elsif forloop.last == true %}, and {% else %}, {% endif %}{{ game }}{% endfor %}.</p>

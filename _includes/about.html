@@ -1,0 +1,57 @@
+<div class="about row">
+
+    <div class="col-lg-9 col-md-8 col-sm-12">
+
+        {% assign bethesda_games = site.bethesda_games | reverse %}
+
+        <div class="col-md-12 about-description">
+            {% include about-description.html %}
+            <hr />
+        </div>
+        {% if site.github.organization_members %}
+        <div class="col-lg-7 col-md-6 col-sm-7">
+
+            {% assign members = (site.github.organization_members | sort: 'id') %}
+
+            <h3 class="sidebar-title-left">Team Members</h3>
+            <ul class="flex-list">
+                {% for member in members %}
+                <li>
+                    <header><span>{{ member.login }}</span></header>
+                    <a href="https://github.com/{{ member.login }}" target="_blank"><img src="{{ member.avatar_url }}" width="100%" height="100%" /></a>
+                </li>
+                {% endfor %}
+            </ul>
+{% comment %}
+            {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse | where: "fork", "false" %}
+            <script>
+                var repos = {{ sorted_repos | jsonify }};
+            </script>
+            <script> var repos = [
+            {% for repo in sorted_repos %}
+                {% for contrib in repo.contributors_url %}
+                    {{ contrib | jsonify }},
+                {% endfor %}
+            {% endfor %}
+            ];
+            </script>
+{% endcomment %}
+        </div>
+        {% endif %}
+        <div class="col-lg-5 col-md-6 col-sm-5 social">
+            <h3 class="sidebar-title-left">Contact Us</h3>
+
+            <ul class="list-group">
+                <li class="list-group-item">Email：<a href="mailto:{{ site.email }}" target="_top">{{ site.email }}</a></li>
+                <li class="list-group-item">GitHub：<a href="{{ site.github_url }}">{{ site.github_url }}</a></li>
+            </ul>
+
+            {% include sidebar-social.html %}
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4">
+        {% include sidebar-repo.html %}
+    </div>
+
+</div>

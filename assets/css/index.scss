@@ -1,0 +1,68 @@
+---
+---
+
+/** Only for index.html **/
+
+.site-header {
+    color: #fff;
+    background: transparent;
+    box-shadow: none;
+    #site-header-brand,
+    .site-header-nav-item,
+    a:hover {
+        color: #fff;
+    }
+}
+
+#site-navbar,
+.navbar-header {
+    margin: 5px 0;
+}
+
+.site-header {
+    &.site-header-nav-scrolled .navbar-inverse,
+    &.site-header-nav-scrolled-ph .navbar-inverse {
+        background: #222;
+    }
+}
+
+.jumbotron {
+    background: #333;
+    background-image: url("../images/home-banner.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 85% 2%;
+    background-size: 45%;
+    text-shadow: 0px 0px 20px rgba(51, 51, 51, 0.5),
+        0px 0px 10px rgba(51, 51, 51, 1),
+        0px 0px 3px rgba(40, 40, 40, 1),
+        0px 0px 2px rgba(30, 30, 30, 0.7);
+}
+
+
+/******* Media Queries *******/
+
+@media (max-width: 768px) {
+    .jumbotron {
+        background-image: none;
+        /*background-size: 80%;*/
+    }
+}
+
+@media (max-width: 960px) {
+    .jumbotron {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 85% 2%;
+        background-size: 55%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .jumbotron {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 85% 2%;
+        background-size: 55%;
+    }
+}
