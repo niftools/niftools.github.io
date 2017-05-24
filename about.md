@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Us
-menu: about
+menu: About
 geopattern: 2e68453
 subtitle:   <span class="meta-info hvr-grow">
                 <span class="octicon octicon-mail"></span>
