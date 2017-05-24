@@ -25,7 +25,11 @@
     <script type="text/javascript" src="/assets/js/script.js"></script>
 
     {% for js in page.js %}
+    {% if js contains "http" %}
+    <script src="{{js}}"></script>
+    {% else %}
     <script src="/assets/js/{{js}}"></script>
+    {% endif %}
     {% endfor %}
 
     {% if site.analytics.google.tracking_id %}
