@@ -7,7 +7,7 @@
         <div id="jumbotron-meta-info">
             <h1>{{ page.title }}</h1>
             <span class="meta-info">
-                {% if page.date %}
+                {% if page.date and page.collection == 'posts' %}
                 <span class="octicon octicon-calendar"></span> {{ page.date | date: "%Y/%m/%d" }}&nbsp;
                 {% endif %}
                 {% if page.subtitle %}
