@@ -1,7 +1,9 @@
 # niftools.github.io
 
 
-## Running Locally
+## Installing Locally
+
+### Prerequisites
 
 You need to install Ruby. After you install Ruby you can simply install Bundler:  `gem install bundler`
 
@@ -12,6 +14,12 @@ You will most likely get an SSL error while trying to build so you need to grab 
 `OPTIONAL` If you want to edit or create posts more easily (instead of by hand), you can uncomment `- jekyll-admin` in `_config.yml` to use the admin interface at localhost:4000/admin.  This change does **not** need to be committed as `jekyll-admin` is local only.  I would recommend leaving it otherwise commented as it appears to disable file watching while editing the site design.
 
 `OPTIONAL` If you are ever designing new pages and need to change `\bower_components` in order to add package dependencies you will need to install Node.js/npm.  You must then install Bower with `npm install -g bower`.  From there you can add Bower packages to the project root's bower.json and then run `bower install` or you can run `bower install <package>`. 
+
+### Building and Running
+
+To build the site locally you run `jekyll build`.  To serve the site locally you can run `jekyll serve`.  This will serve from localhost:4000 and will watch for any changed files so that changes will show up as you make them.
+
+To view what the site would look like with the posts in `_drafts` published you can run `jekyll serve --drafts`.
 
 
 ## Front-Matter
@@ -54,4 +62,25 @@ categories: nifskope releases
 
 ```
 
-Using `jekyll-admin` will automate most of this for you, and you can include custom front matter variables in the field below the post text. 
+## Publishing
+
+To avoid publishing manually, you may use `jekyll-admin` if you have uncommented it in `_config.yml` and restarted jekyll.  The admin interface will be available at localhost:4000/admin. You can include custom front matter variables in the field below the post text. 
+
+### Posts
+
+Placing any Markdown or HTML file in `_posts` with valid front matter will publish the file to the site.  Where it goes will depend on the front matter such as the layout and what categories are listed. A `post` layout with `categories: nifskope releases` will get published to `/nifskope/releases/`.
+
+[Relevant Documentation](https://jekyllrb.com/docs/posts/)
+
+#### Categories
+
+Most posts should likely consist of two categories:  the project or main product name and a subcategory such as releases e.g. `categories: nifskope releases` or `categories: blender releases`.  If posting about general developmental news or about multiple projects, use something like `category: updates`. 
+
+### Pages
+
+A `page` layout titled `mypage.md` will get published to `/mypage` if it is in the project root. 
+
+[Relevant Documentation](https://jekyllrb.com/docs/pages/)
+
+
+
