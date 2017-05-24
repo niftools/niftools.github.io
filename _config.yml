@@ -10,7 +10,7 @@ title: NifTools Project
 description: NIF File Format Library and Tools
 name: NifTools
 site: NifTools.org
-url: https://niftools.github.io
+url: http://www.niftools.org
 email: info@niftools.org
 twitter: niftools
 youtube: UC3oVHybxr9BsL-Tjpm4R7EQ
@@ -59,7 +59,7 @@ navs:
     label: Documentation
 
   -
-    href: http://niftools.sourceforge.net/forum
+    href: http://forum.niftools.org
     label: Forums
 
   -
