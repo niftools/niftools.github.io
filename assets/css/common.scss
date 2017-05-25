@@ -201,7 +201,7 @@ body {
 .post-list-item {
     position: relative;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     list-style: none;
     border-bottom: 1px solid #eee;
     &:first-child {
@@ -212,6 +212,7 @@ body {
     }
     .post-list-title a {
         text-decoration: none;
+        padding-bottom: 10px;
     }
 
     .post-list-description {
@@ -222,10 +223,11 @@ body {
     }
 
     .post-list-meta {
-        margin-top: 8px;
+        margin-top: 5px;
         margin-bottom: 0;
         color: #888;
         font-size: 18px;
+        text-align: right;
         &.octicon {
             font-size: 18px;
         }
